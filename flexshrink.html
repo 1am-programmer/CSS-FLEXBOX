@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEXBOX: Flex Shrink</title>
+</head>
+
+<body>
+
+    <!-- Flex-Shrink, to determine the rate at which the flex Shrink, using the numbers as shown below -->
+    <!-- The bigger the flex-shrink number,the more it shrinks -->
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .flex-container {
+            display: flex;
+            background: #fff;
+        }
+
+        .box {
+            height: 100px;
+            min-width: 320px;
+        }
+
+        .one {
+            background-color: red;
+            flex-shrink: 4;
+        }
+
+        .two {
+            background-color: green;
+            flex-shrink: 5;
+        }
+
+        .three {
+            background-color: yellow;
+            flex-shrink: 6;
+        }
+    </style>
+
+    <div class="wrapper">
+        <div class="flex-container">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

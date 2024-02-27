@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEXBOX: Grid and Stacked layout</title>
+</head>
+<style>
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+    }
+
+    body {
+        background: #eee;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /*Menu based styles*/
+    nav {
+        background-color: black;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    nav a {
+        color: white;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    nav a:hover {
+        background-color: grey;
+    }
+
+    /*Grid vs flex base styles*/
+    #blocks {
+        margin: 20px;
+    }
+
+    article {
+        background: #fff;
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    article h2 {
+        text-align: center;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+
+
+    /*Flex based styles*/
+    @media screen and (min-width: 768px) {
+        nav ul {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        nav li {
+            flex: 1 1 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        article {
+            flex: 0 1 32%;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul class="social">
+                <li><a href="" class="fb">Facebook</a></li>
+                <li><a href="" class="tw">Twitter</a></li>
+            </ul>
+        </nav>
+
+        <!-- <div style="margin: 20px;">
+            <span>Layout: </span>
+            <a href="#" class="stack">stack</a>
+            <a href="#" class="grid">Grid</a>
+            Add Javascript to make it functional
+
+        </div> -->
+
+
+        <section id="blocks">
+            <article>
+                <h2>What is web development?</h2>
+                <p>
+                    A web developer's job is to create websites. While their primary role is to ensure the website is
+                    visually appealing and easy to navigate, many web developers are also responsible for the website's
+                    performance and capacit
+                </p>
+            </article>
+
+            <article>
+                <h2>Who are Game developers</h2>
+                <p>
+                    Game developers typically play a role in several elements of game development, including visuals,
+                    artificial intelligence, user interface, and game logic. Game developers take the game designers'
+                    designs, storyboards, and ideas and use them as blueprints to bring the game to life as something
+                    gamers
+                    can actually play
+                </p>
+            </article>
+
+            <article>
+                <h2>What is app development</h2>
+                <p>
+                    Mobile application development is the process of creating software applications that run on a mobile
+                    device, and a typical mobile application utilizes a network connection to work with remote computing
+                    resources.
+
+                </p>
+            </article>
+            <article>
+                <h2>What is web development?</h2>
+                <p>
+                    A web developer's job is to create websites. While their primary role is to ensure the website is
+                    visually appealing and easy to navigate, many web developers are also responsible for the website's
+                    performance and capacit
+                </p>
+            </article>
+
+            <article>
+                <h2>Who are Game developers</h2>
+                <p>
+                    Game developers typically play a role in several elements of game development, including visuals,
+                    artificial intelligence, user interface, and game logic. Game developers take the game designers'
+                    designs, storyboards, and ideas and use them as blueprints to bring the game to life as something
+                    gamers
+                    can actually play
+                </p>
+            </article>
+
+            <article>
+                <h2>What is app development</h2>
+                <p>
+                    Mobile application development is the process of creating software applications that run on a mobile
+                    device, and a typical mobile application utilizes a network connection to work with remote computing
+                    resources.
+
+                </p>
+            </article>
+
+
+        </section>
+
+    </div>
+</body>
+
+</html>

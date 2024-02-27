@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEXBOX: Nested Menu</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        .wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /*Menu based styles*/
+        nav {
+            background-color: black;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: grey;
+        }
+
+        /*Flex based styles*/
+        @media screen and (min-width:768px) {
+            nav ul {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            nav li {
+                flex: 1 1 0;
+            }
+
+            nav{
+                display: flex;
+                justify-content: space-between;
+            }
+
+        }
+    </style>
+
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul class="social">
+                <li><a href="" class="fb">Facebook</a></li>
+                <li><a href="" class="tw">Twitter</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

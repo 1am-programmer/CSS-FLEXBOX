@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEXBOX: Flex Grow</title>
+</head>
+
+<body>
+
+    <!-- Flex-grow, to determine the rate at which the flex grows, using the numbers as shown below -->
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .flex-container {
+            display: flex;
+            background: #fff;
+        }
+
+        .box {
+            height: 100px;
+            min-width: 100px;
+            /*  flex-grow: 1;       /*Makes the boxes grow to fill the space left,i.e the max-width*/
+        }
+
+        .one {
+            background-color: red;
+            flex-grow: 1;
+        }
+
+        .two {
+            background-color: green;
+            flex-grow: 2;
+        }
+
+        .three {
+            background-color: yellow;
+            flex-grow: 3;
+        }
+    </style>
+
+    <div class="wrapper">
+        <div class="flex-container">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

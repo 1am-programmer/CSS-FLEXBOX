@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEXBOX: Element Order</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+
+        body {
+            background: #eee;
+            color: #333;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 960px;
+        }
+        #blocks{
+            display: flex;
+            margin: 10px;
+            justify-content: space-between;
+        }
+
+        #blocks div {
+            flex: 0 0 100px;
+            padding: 40px 0;
+            text-align: center;
+            background: #ccc;
+        }
+
+        .one {
+            order: 2;
+        }
+
+        .two {
+            order: 1;
+        }
+
+        .three {
+            order: 4;
+        }
+
+        .four {
+            order: 3;
+        }
+
+        /*Changing the order number will re-arrange how they will be displayed on the webpage, from lowest to highest*/
+    </style>
+
+    <div class="wrapper">
+
+        <section id="blocks">
+
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+        </section>
+
+
+    </div>
+</body>
+
+</html>
