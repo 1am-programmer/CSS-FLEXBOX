@@ -1,5 +1,5 @@
 
- Below is a sample README.md file for a list of CSS Flexbox methods:
+ Below is a simple README.md file for a list of CSS Flexbox methods:
 
 
 # CSS Flexbox Methods
